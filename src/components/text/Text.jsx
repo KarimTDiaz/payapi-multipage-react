@@ -1,7 +1,12 @@
-import { StyledText } from "./styles"
+import { StyledText } from './styles';
 
-const Text = ({ text, children }) => {
-    return <StyledText>{text}{children}</StyledText>
-}
+const Text = ({ text, children, dark }) => {
+	return (
+		<StyledText dark={dark}>
+			{text}
+			{children}
+		</StyledText>
+	);
+};
 
-export default Text 
+export default Text;

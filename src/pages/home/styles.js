@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { COLORS } from '../../constants/variables';
+import { COLORS, FONTS_FAM } from '../../constants/variables';
 
 const HomeSection = styled.section`
 	text-align: center;
-	padding: ${({ dark }) => (dark ? '5rem 1.5rem' : '0')};
+	padding: ${({ head }) => (head ? '0 1.5rem' : '0 1.5rem 5rem 1.5rem')};
 	background-color: ${({ dark }) =>
 		dark
 			? `${COLORS.secondary.bgColorDark}`
@@ -24,6 +24,39 @@ const HomeCompanies = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 45px;
+	padding-top: 5rem;
 `;
 
-export { HomeSection, HomeImageMobile, HomeCompanies };
+const HomeImageCoding = styled.img`
+	padding-top: 2rem;
+	margin-bottom: -1rem;
+`;
+const HomeImageTwoMobiles = styled.img`
+	margin-top: -2rem;
+`;
+const HomeServicesList = styled.ul`
+	display: flex;
+	flex-direction: column;
+	gap: 3.125rem;
+`;
+const ServicesItem = styled.li``;
+const ServicesIcon = styled.img`
+	margin-left: auto;
+	margin-right: auto;
+`;
+const ServicesTitle = styled.h3`
+	font-family: ${FONTS_FAM.secondary};
+	color: ${COLORS.secondary.textDark};
+`;
+
+export {
+	HomeSection,
+	HomeImageMobile,
+	HomeCompanies,
+	HomeImageCoding,
+	HomeImageTwoMobiles,
+	HomeServicesList,
+	ServicesItem,
+	ServicesIcon,
+	ServicesTitle
+};
